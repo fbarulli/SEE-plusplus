@@ -6,7 +6,7 @@
 
  
 /*
-ft_iterative_factorial
+ft_recursive_factorial
 
 -Create an iterated function that returns a number. This number is the result of a
 factorial operation based on the number given as a parameter.
@@ -15,10 +15,10 @@ factorial operation based on the number given as a parameter.
 n *(n-1)
 */
 
-int ft_iterative_factorial(int nb)
+int ft_recursive_factorial(int nb)
 {
 	if (nb >= 1)
-		return nb*(ft_iterative_factorial(nb-1));
+		return nb*(ft_recursive_factorial(nb-1));
 	else
 		return 1;
 }
@@ -38,7 +38,7 @@ int main()
 	 start_t = start_t / CLOCKS_PER_SEC;
    printf("Starting of the program, start_t = %ld\n", start_t);
     
-	 ft_iterative_factorial(1287386);
+	 ft_recursive_factorial(1287386);
 		
    
    //printf("End of the big loop, end_t = %ld\n", end_t);
