@@ -14,7 +14,7 @@ Write your code in this editor and press "Run" button to compile and execute it.
 /******************************************************************************/
 /* using write and letters */
 
-void    ft_print_alphabet(void){
+void write_letters_ft_print_alphabet(void){
     char letter = 'a';
     while ( letter <= 'z')
     {
@@ -26,7 +26,7 @@ void    ft_print_alphabet(void){
 /******************************************************************************/
 /* using write and numbers */
 
-void    ft_print_a_p2(void)
+void    write_numbers_ft_print_a_p2(void)
 {
     int letter = 97;
     while (letter <= 122)
@@ -41,17 +41,17 @@ void    ft_print_a_p2(void)
 /******************************************************************************/
 /* using for and printf */
 
-void ft_print_alphabet(void){
+void for_ft_print_alphabet(void){
     for (char letter = 'a'; // initialization
         letter <= 'z'; // condition
         letter++)
     {
     printf("%c", letter);
-    }
+    }}
 /******************************************************************************/
 /* using string array + write */
 
-void ft_print_alphabet(void) {
+void array_ft_print_alphabet(void){
     char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
     write(1, alphabet, 26);
 }
@@ -73,8 +73,8 @@ void put_char(void){
 
 
 
-void ft_print_alphabet(void){
-    char *letter = 'abcdefghijklmnopqrstuvwxyz';
+void pointer_ft_print_alphabet(void){
+    char *letter = "abcdefghijklmnopqrstuvwxyz";
     while (*letter) {
         write(1, letter, 1);
         letter++;
@@ -90,7 +90,12 @@ void ft_print_alphabet(void){
 
 int main()
 {
-    ft_print_a_p2();
+    put_char();
+    write_letters_ft_print_alphabet();
+    write_numbers_ft_print_a_p2();
+    pointer_ft_print_alphabet();
+    array_ft_print_alphabet();
+    for_ft_print_alphabet();
 
     return 1;
 }
