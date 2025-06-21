@@ -9,12 +9,13 @@ Write your code in this editor and press "Run" button to compile and execute it.
 #include <stdio.h>
 #include <unistd.h>
 
-void    ft_print_alphabet(void)
-{
-    char letter;
-    
-    letter = 'a';
-    
+
+
+/******************************************************************************/
+/* using write and letters */
+
+void    ft_print_alphabet(void){
+    char letter = 'a';
     while ( letter <= 'z')
     {
         write(1, &letter, 1);
@@ -22,12 +23,12 @@ void    ft_print_alphabet(void)
     }
 }
 
+/******************************************************************************/
+/* using write and numbers */
+
 void    ft_print_a_p2(void)
 {
-    int letter;
-    
-    letter = 97;
-    
+    int letter = 97;
     while (letter <= 122)
     {
         write(1, &letter, 1);
@@ -35,7 +36,57 @@ void    ft_print_a_p2(void)
     }
     return;
 }
-    
+
+
+/******************************************************************************/
+/* using for and printf */
+
+void ft_print_alphabet(void){
+    for (char letter = 'a'; // initialization
+        letter <= 'z'; // condition
+        letter++)
+    {
+    printf("%c", letter);
+    }
+/******************************************************************************/
+/* using string array + write */
+
+void ft_print_alphabet(void) {
+    char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
+    write(1, alphabet, 26);
+}
+
+
+
+
+
+/******************************************************************************/
+void put_char(void){
+    char letter = 'a';
+    while (letter <= 'z'){
+        putchar(letter);
+        letter++;
+    }
+}
+/******************************************************************************/
+
+
+
+
+void ft_print_alphabet(void){
+    char *letter = 'abcdefghijklmnopqrstuvwxyz';
+    while (*letter) {
+        write(1, letter, 1);
+        letter++;
+    }
+}
+
+
+
+
+
+
+
 
 int main()
 {
