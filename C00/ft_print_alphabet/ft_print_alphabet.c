@@ -19,7 +19,7 @@ void write_array(void){
     char alpha[] = "abcdefghijklmnopqrstuvwxyz";
     int len = 0;
     while (alpha[len]!= '\0'){
-        len++;
+        
     }
     write(1, &alpha, len);
 }
