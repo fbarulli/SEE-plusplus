@@ -51,14 +51,14 @@ void reverse_array(void)
 void reverse_pointer(void)
 {
     char *start = "abcdefghijklmnopqrstuvwxyz";
-    char *end = array;
+    char *end = start;
     
     // find end
     while (*end){
         end++;
     }
     
-    while (--end >= 0 start){
+    while (--end >= start){
         write(1, end, 1);
     }
     
